@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pagename }}</title>
+</head><h1 align="center">{{ pagename }}</h1>
+<body>
+    {% for j, i in menu.items %}
+        {% for k in i %}
+            <h2 align="center"><a href='{{ k }}'>{{ j }}</a></h2>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
