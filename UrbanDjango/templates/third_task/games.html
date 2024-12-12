@@ -5,12 +5,10 @@
     <title>{{ pagename }}</title>
 </head><h1 align="center">{{ pagename }}</h1>
 <body>
-    {% for l, m in content.items %}
-        {% for n in m %}
-            <ul>
-                <li><h2>{{ l }}: {{ n }} - <button>Купить</button></h2></li>
-            </ul>
-        {% endfor %}
+    {% for i in content %}
+    <ul>
+        <li><h2>{{ i }} - <button>Купить</button></h2></li>
+    </ul>
     {% endfor %}
     <h2 align="center"><a href="http://127.0.0.1:8000/platform/"><button>Вернуться обратно</button></a></h2>
 </body>
