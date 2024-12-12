@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
-</head><h1 align="center">Главная страница</h1>
+    <title>{{ pagename }}</title>
+</head><h1 align="center">{{ pagename }}</h1>
 <body>
-    <h2 align="center"><a href="http://127.0.0.1:8000/">"Главная"</a></h2>
-    <h2 align="center"><a href="http://127.0.0.1:8000/games/">"Магазин"</a></h2>
-    <h2 align="center"><a href="http://127.0.0.1:8000/cart/">"Корзина"</a></h2>
+    {% for j, i in menu.items %}
+        {% for k in i %}
+            <h2 align="center"><a href='{{ k }}'>{{ j }}</a></h2>
+        {% endfor %}
+    {% endfor %}
 </body>
 </html>
