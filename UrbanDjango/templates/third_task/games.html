@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Игры</title>
-</head><h1 align="center">Игры</h1>
+    <title>{{ pagename }}</title>
+</head><h1 align="center">{{ pagename }}</h1>
 <body>
-    <ul>
-        <li><h2>Atomik Heart - <a href="http://127.0.0.1:8000/cart/"><button>Купить</button></a></h2></li>
-        <li><h2>Cyberpunk 2077 - <a href="http://127.0.0.1:8000/cart/"><button>Купить</button></a></h2></li>
-        <li><h2>PayDay 2 - <a href="http://127.0.0.1:8000/cart/"><button>Купить</button></a></h2></li>
-    </ul>
+    {% for l, m in content.items %}
+        {% for n in m %}
+            <ul>
+                <li><h2>{{ l }}: {{ n }} - <button>Купить</button></h2></li>
+            </ul>
+        {% endfor %}
+    {% endfor %}
     <h2 align="center"><a href="http://127.0.0.1:8000/platform/"><button>Вернуться обратно</button></a></h2>
 </body>
 </html>
