@@ -17,12 +17,11 @@ def get_menu(request):
 
 def games(request):
     pagename = 'Игры'
-    menu = menu_
     content = {'games': ["Atomic Heart", "Cyberpunk 2077", "PayDay 2"],
                'programs': ["Microsoft Office", "Windows 10 Pro"]}
     context = {
         'pagename': pagename,
-        'menu': menu,
+        'menu': menu_,
         'content': content
     }
     return render(request, 'fourth_task/games.html', context)
