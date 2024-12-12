@@ -18,8 +18,7 @@ def platform(request):
 
 def games(request):
     pagename = 'Игры'
-    content = {'games': ["Atomic Heart", "Cyberpunk 2077", "PayDay 2"],
-               'programs': ["Microsoft Office", "Windows 10 Pro"]}
+    content = ["Atomic Heart", "Cyberpunk 2077", "PayDay 2"]
     context = {
         'pagename': pagename,
         'menu': menu_,
