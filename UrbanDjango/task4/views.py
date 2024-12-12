@@ -7,10 +7,9 @@ menu_ = {'Главная': ["http://127.0.0.1:8000/"], 'Магазин': ["http:
 # Create your views here.
 def get_menu(request):
     pagename = 'Главная страница'
-    menu = menu_
     context = {
         'pagename': pagename,
-        'menu': menu,
+        'menu': menu_,
     }
     return render(request, 'fourth_task/menu.html', context)
 
@@ -29,11 +28,10 @@ def games(request):
 
 def cart(request):
     pagename = 'Корзина'
-    menu = menu_
     content = 'Извините, ваша корзина пуста'
     context = {
         'pagename': pagename,
-        'menu': menu,
+        'menu': menu_,
         'content': content
     }
     return render(request, 'fourth_task/cart.html', context)
